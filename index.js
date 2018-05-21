@@ -13,7 +13,9 @@ module.exports = function (b, opts) {
       cb();
     }
     function onend (cb) {
-      const serialized = prepack(code, opts);
+      const serialized = prepack([{
+        fileContents: code
+      }], opts);
       this.push(serialized.code);
       cb();
     }
