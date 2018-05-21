@@ -1,4 +1,4 @@
-const prepack = require('prepack').prepack;
+const prepack = require('prepack').prepackSources;
 const through = require('through2');
 
 module.exports = function (b, opts) {
